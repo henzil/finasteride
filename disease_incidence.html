@@ -17,14 +17,19 @@
 	<!--  右上角图片 -->
 	<div class="right_top">
 		<div class="left">
-			<img alt="" src="./image/L0/L0-2.png">
+			<img alt="" src="./image/L0/L0-2.png" />
 		</div>
 		<div class="right">
-			<img alt="" src="./image/L0/L0-1.png">
+			<img alt="" src="./image/L0/L0-1.png" />
 		</div>
 	</div>
-	
-	
+<!-- 	中间路 div -->
+	<div class="middle_road">
+		<div id="image_bg"><img alt="" src="./image/L4/L4-3.png" /></div>
+		
+		
+		<div id="image_05"><img alt="" src="./image/L4/L4-1.png" /></div>
+	</div>
 	
 	<!--  右下角图片 -->
 	<div class="right_bottom">
@@ -32,14 +37,191 @@
 			<img alt="" src="./image/L4/L4-4.png">
 		</div>
 		<div id="middle">
-			<img alt="" src="./image/L4/L4-5.png">
+			<canvas id="image_canvas" width="419" height="121"></canvas>
+		</div>
+		<div id="top">
+			<img alt="" src="./image/L4/L4-2.png">
 		</div>
 	</div>
-	
+	<!-- 	正确和错误提示 -->
+	<div class="error_or_checkmark">
+		<canvas id="myCanvas" width="167" height="144" ></canvas>
+	</div>
 </div>
 
 <script type="text/javascript">
 $('.left').addClass('transition1');
+
+
+
+
+</script>
+
+<script type="text/javascript">
+function createDragAndMoveElement(element){
+// 	console.log('element.id='+element.id);
+
+	var isDown = false;
+	$(element).on('mousedown',function(e){
+		$(element).css('z-index',$('.right_bottom #top').zIndex++);
+		element.last={'x':e.pageX,
+					  'y':e.pageY};
+		element.position=element.position||{'x':0,'y':0};
+		isDown = true;
+		indexPosition = 0;
+		return false;
+	});
+	$(element).on('mousemove',function(e){
+		if(isDown){
+			element.position.x=element.position.x+e.pageX-element.last.x;
+			element.position.y=0;
+			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+			console.log('mousemove element.position.x='+element.position.x);
+			console.log('mousemove e.pageX='+e.pageX);
+			console.log('mousemove e.pageY='+e.pageY);
+			element.last={'x':e.pageX, 'y':e.pageY};
+			indexPosition = element.position.x;
+			drawCanvas();
+			drawPeople();
+		}
+	});
+	$(element).on('mouseover',function(e){
+		if(isDown){
+			element.position.x=element.position.x+e.pageX-element.last.x;
+			element.position.y=0;
+			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+			console.log('mouseover e.pageX='+e.pageX);
+			console.log('mouseover e.pageY='+e.pageY);
+			element.last={'x':e.pageX, 'y':e.pageY};
+			indexPosition = element.position.x;
+			drawCanvas();
+			drawPeople();
+		}
+	});
+	$(element).on('mouseout',function(e){
+		if(isDown){
+			element.position.x=element.position.x+e.pageX-element.last.x;
+			element.position.y=0;
+			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+			console.log('mouseout e.pageX='+e.pageX);
+			console.log('mouseout e.pageY='+e.pageY);
+			element.last={'x':e.pageX, 'y':e.pageY};
+			indexPosition = element.position.x;
+			drawCanvas();
+		}
+	});
+	$(element).on('mouseup',function(e){
+		console.log('>>end');
+		isDown = false;
+		console.log('!!!!!!!!!!!!!!!! indexPosition/300='+(indexPosition/300));
+		if((indexPosition/300)>0.82 &&
+				(indexPosition/300)<0.84){
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawCheckmarkImage(ctx);
+			playCheckmark();
+		} else {
+			playError();
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawErrorImage(ctx);
+		}
+	});
+	$(element).on('touchstart',function(e){
+		$(element).css('z-index',$('.right_bottom #top').zIndex++);
+		element.last={'x':e.pageX,
+					  'y':e.pageY};
+		element.position=element.position||{'x':0,'y':0};
+		isDown = true;
+		indexPosition = 0;
+		return false;
+	});
+	$(element).on('touchmove',function(e){
+		if(isDown){
+			element.position.x=element.position.x+e.pageX-element.last.x;
+			element.position.y=0;
+			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+			console.log('mousemove element.position.x='+element.position.x);
+			console.log('mousemove e.pageX='+e.pageX);
+			console.log('mousemove e.pageY='+e.pageY);
+			element.last={'x':e.pageX, 'y':e.pageY};
+			indexPosition = element.position.x;
+			drawCanvas();
+			drawPeople();
+		}
+	});
+	$(element).on('touchend',function(e){
+		console.log('>>end');
+		isDown = false;
+		console.log('!!!!!!!!!!!!!!!! indexPosition/300='+(indexPosition/300));
+		if((indexPosition/300)>0.82 &&
+				(indexPosition/300)<0.84){
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawCheckmarkImage(ctx);
+			playCheckmark();
+		} else {
+			playError();
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawErrorImage(ctx);
+		}
+	});
+
+}
+var indexPosition;
+var element=$('.right_bottom #top');
+$.each(element,function(){
+	createDragAndMoveElement(this);
+});
+$('.right_bottom #top').zIndex=1;
+
+function playError() 
+{ 
+	var snd = new Audio("./mp3/error.mp3");
+	snd.play();
+} 
+function playCheckmark() 
+{ 
+	var snd = new Audio("./mp3/checkmark.mp3");
+	snd.play();
+} 
+
+function drawCanvas(){
+	var c1 = document.getElementById("image_canvas");
+	var ctx1=c1.getContext("2d");
+	
+	var img=new Image();
+    img.src="./image/L4/L4-4.png";
+    ctx1.drawImage(img, 0, 0, 419, 121); 
+	//image
+	var imageObj = new Image();
+	imageObj.src="./image/L4/L4-5.png";//image路径
+// 	imageObj.onload = function() {
+	    // draw cropped image
+	    var sourceX = 0;//相对原始图，所要截取的点坐标，从图片的0,0点开始算，
+	    var sourceY = 0;
+// 	    var sourceWidth = 51;//相对原始图，要截取的长宽值
+		var sourceWidth = 51+indexPosition;//相对原始图，要截取的长宽值
+	    var sourceHeight = 121;
+	    var destX = 0;//小图出现的坐标点
+	    var destY = 0;
+// 	    var destWidth = 51;//小图长度值
+	    var destWidth = 51+indexPosition;//小图长度值
+	    var destHeight = 121;
+// 	    ctx.fillStyle = "red";
+//         ctx.fillRect(0, 0, 419, 121);
+	    ctx1.drawImage(imageObj, sourceX, sourceY, sourceWidth,
+	        sourceHeight, destX, destY, destWidth, destHeight);
+// 	}
+}
+function drawPeople(){
+	var people = $('#image_05');
+	var scale = 1+(indexPosition/400);
+	
+	people.css('-webkit-transform','translate('+(-20*indexPosition/300)+'px,'+(-60*indexPosition/300)+'px) scale('+scale+')');
+}
+
 </script>
 </body>
 </html>

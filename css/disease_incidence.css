@@ -84,9 +84,9 @@ body{
 /* 右侧底部手指滑动选择年龄 */
 .right_bottom{
 	width: 419px;
-	height: 121px;
+	height: 130px;
 	position: absolute;
-	left: 659px;
+	left: 590px;
 	top: 600px;
 }
 
@@ -108,16 +108,16 @@ body{
 	left: 0px;
 	top: 0px;
 }
-.right_bottom #middle img{
-	width: 100%;
-	height: 100%;
+.right_bottom #middle canvas{
+	
 }
 .right_bottom #top{
-/* 	width: 210px; */
-/* 	height: 61px; */
-/* 	position: absolute; */
-/* 	left: 0px; */
-/* 	top: 0px; */
+	width: 30px;
+	height: 100px;
+	position: absolute;
+	left: 35px;
+	top: 30px;
+/* 	background-color: aqua; */
 }
 .right_bottom #top img{
 	width: 100%;
@@ -126,6 +126,61 @@ body{
 
 /* 中间路 div */
 .middle_road{
-	
+	width: 737px;
+	height: 506px;
+	position: absolute;
+	left: 70px;
+	top: 180px;
+}
+.middle_road #image_bg{
+	width: 737px;
+	height: 506px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.middle_road #image_bg img{
+	width: 100%;
+	height: 100%;
+}
+.middle_road #image_01{
+	width: 737px;
+	height: 506px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.middle_road #image_02{
+	width: 737px;
+	height: 506px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.middle_road #image_05{
+	width: 111px;
+	height: 184px;
+	position: absolute;
+	left: 540px;
+	top: 240px;
+/* 	left: 520px; */
+/* 	top: 180px; */
+}
+.middle_road #image_05 img{
+	width: 100%;
+	height: 100%;
 }
 
+/* 对号和错误符号显示 */
+.error_or_checkmark{
+	position: absolute;
+	left: 810px;
+	top: 350px;
+	width: 167px;
+	height: 144px
+}
+
+.error_or_checkmark canvas{
+	width: 167px;
+	height: 144px
+}

@@ -138,16 +138,16 @@
 <!-- 	右侧条 -->
 	<div class="choose_item">
 		<div id="cav1">
-			<img alt="" src="./image/L2/L2-15.jpg">
+			<img alt="" src="./image/L2/L2-15.png">
 		</div>
 		<div id="cav2">
-			<img alt="" src="./image/L2/L2-16.jpg">
+			<img alt="" src="./image/L2/L2-16.png">
 		</div>
 		<div id="cav3">
-			<img alt="" src="./image/L2/L2-17.jpg">
+			<img alt="" src="./image/L2/L2-17.png">
 		</div>
 		<div id="cav4">
-			<img alt="" src="./image/L2/L2-18.jpg">
+			<img alt="" src="./image/L2/L2-18.png">
 		</div>
 	
 	</div>
@@ -215,6 +215,71 @@ function createDragAndMoveElement(element){
 		}
 	});
 	$(element).on('mouseup',function(e){
+// 		console.log('>>end');
+		isDown = false;
+		var isChoose;
+		
+		if(element.id == 'cav1'){
+			isChoose = $(".prostate_volume_was_larger");
+			
+		}
+		if(element.id == 'cav2'){
+			isChoose = $(".surgical_treatment");
+		}
+		if(element.id == 'cav3'){
+			isChoose = $(".bhp_related_to_surgery");
+		}
+		if(element.id == 'cav4'){
+			isChoose = $(".acute_urinary_retention");
+		}
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageY-isChoose.position().top-isChoose.parent().position().top) > 0));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageX-isChoose.position().left-isChoose.parent().position().left) > 0));
+		if(((e.pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()) &&
+				((e.pageY-isChoose.position().top-isChoose.parent().position().top) > 0) &&
+				((e.pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()) &&
+				((e.pageX-isChoose.position().left-isChoose.parent().position().left) > 0)){
+			console.log('#########true');
+// 			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawCheckmarkImage(ctx);
+			playCheckmark();
+		} else {
+			playError();
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawErrorImage(ctx);
+			$(element).css('-webkit-transform','translate(0,0)');
+			element.position={'x':0,
+					  'y':0};
+		}
+// 		console.log('^^^^^'+e.pageX);
+// 		console.log('^^^^^'+isChoose.position().left);
+// 		console.log('^^^^^'+isChoose.width());
+	});
+	
+	$(element).on('touchstart',function(e){
+		$(element).css('z-index',$('.choose_item')[0].zIndex++);
+		element.last={'x':e.pageX,
+					  'y':e.pageY};
+		element.position=element.position||{'x':0,'y':0};
+		isDown = true;
+		return false;
+	});
+	$(element).on('touchmove',function(e){
+		if(isDown){
+			element.position.x=element.position.x+e.pageX-element.last.x;
+			element.position.y=element.position.y+e.pageY-element.last.y;
+			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+// 			console.log('mousemove e.pageX='+e.pageX);
+// 			console.log('mousemove e.pageY='+e.pageY);
+			element.last={'x':e.pageX, 'y':e.pageY};
+			
+		}
+	});
+	$(element).on('touchend',function(e){
 // 		console.log('>>end');
 		isDown = false;
 		var isChoose;
