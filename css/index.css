@@ -1,0 +1,154 @@
+@CHARSET "UTF-8";
+html{
+	background-color: white;
+}
+body{
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	background-image: url("../image/L0/L0-bg.png");
+	margin: 0px auto;
+}
+.all{
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	margin: 0px auto;
+}
+.left_top_text{
+	position: absolute;
+	float: left;
+	width: 300px;
+	height: 54px;
+	margin-left: -14px;
+	top: -54px;
+	left: -300px;
+	opacity: 0.5;
+}
+
+.left_top_text img{
+	width: 100%;
+	height: 100%;
+}
+.transition4{
+	opacity: 1;
+	-webkit-transition-delay: 1s;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-in-out;
+	left: 0px;
+	top: 0px;
+}
+.right_top{
+	width: auto;
+	height: 54px;
+	float: right;
+	position: absolute;
+	top: -54px;
+	left: 880px;
+	opacity: 0.6;
+}
+.transition3{
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-in-out;
+	left: 880px;
+	top: 0px;
+}
+.right_top .left{
+	width: 59px;
+	height: 54px;
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	
+}
+.right_top .left img{
+	width: 100%;
+	height: 100%;
+}
+
+.transition1{
+	-webkit-transform: rotate(360deg);
+	-webkit-transition-delay: 2s;
+	-webkit-transition-duration: 2s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-out;
+}
+
+.right_top .right{
+	width: 84px;
+	height: 54px;
+	position: absolute;
+	left: 59px;
+	top: 10px;
+}
+
+.right_top .right img{
+	width: 100%;
+	height: 100%;
+}
+
+.right_bottom{
+	position: absolute;
+	left: 50px;
+	top: 80px;
+	opacity: 0;
+	
+}
+
+.right_bottom img{
+	
+}
+
+.transition2{
+	
+	-webkit-transition-delay: 0.5s;
+	opacity: 1;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-in-out;
+	left: 850px;
+	top: 580px;
+}
+
+.bottom{
+	position: absolute;
+	left: 560px;
+	top: 680px;
+	opacity: 0;
+	width: 255px;
+	height: 50px;
+	
+}
+.bottom img{
+	width: 100%;
+	height: 100%;
+	box-shadow: rgba(0, 0, 0, 0.31) 7px 6px 8px 0px;
+	-webkit-transform: scale(0.3);
+}
+.transition5{
+	-webkit-transform: scale(2.7);
+	-webkit-transition-delay: 0.5s;
+	opacity: 1;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-in-out;
+	left: 560px;
+	top: 580px;
+}
+.right{
+	position: absolute;
+	left: 920px;
+	top: 350px;
+	opacity: 1;
+	width: 104px;
+	height: 70px;
+}
+
+

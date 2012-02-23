@@ -1,0 +1,715 @@
+@CHARSET "UTF-8";
+html{
+	background-color: red;
+	margin: 0px;
+}
+body{
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	background-image: url("../image/L2/L2-bg.png");
+	margin: 0px auto;
+}
+.all{
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	margin: 0px auto;
+}
+#text{
+	font-size: 20px;
+	font-style: normal;
+	color: black;
+	font-weight: bold;
+}
+
+.left_top_text{
+	position: absolute;
+	float: left;
+	width: 550px;
+	height: 54px;
+	top: 24px;
+	left: 20px;
+	color: white;
+	font-size: 25px;
+	font-style: inherit;
+	margin: 0px auto;
+}
+
+.right_top{
+	width: auto;
+	height: 54px;
+	float: right;
+	position: absolute;
+	top: 10px;
+	left: 840px;
+	opacity: 1;
+}
+.right_top .left{
+	width: 44px;
+	height: 40px;
+	position: absolute;
+	left: 0px;
+	top: 20px;
+	
+}
+.right_top .left img{
+	width: 100%;
+	height: 100%;
+}
+
+.transition1{
+	-webkit-transform: rotate(360deg);
+	-webkit-transition-delay: 2s;
+	-webkit-transition-duration: 2s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-out;
+}
+
+.right_top .right{
+	width: 108px;
+	height: 70px;
+	position: absolute;
+	left: 59px;
+	top: 10px;
+}
+
+.right_top .right img{
+	width: 100%;
+	height: 100%;
+}
+/* <!-- 	前列腺体积变大 --> */
+.prostate_volume_was_larger{
+	position: absolute;
+	left: 149px;
+	top: 190px;
+	width: 200px;
+	height: 140px;
+}
+.prostate_volume_was_larger #image1{
+	position: absolute;
+	width: 123px;
+	height: 32px;
+}
+.prostate_volume_was_larger #image1 img{
+	width: 100%;
+	height: 100%;
+}
+.prostate_volume_was_larger #image2{
+	position: absolute;
+	width: 89px;
+	height: 106px;
+	left: 20px;
+	top: 10px;
+}
+.prostate_volume_was_larger #image2 img{
+	width: 100%;
+	height: 100%;
+}
+.prostate_volume_was_larger #t{
+	position: absolute;
+	left: 10px;
+	top: 120px;
+	font-size: 16px;
+	font-style: normal;
+	color: black;
+	font-weight: bold;
+}
+.a1{	
+	-webkit-animation:demo1 1s ease-out infinite;
+}
+@-webkit-keyframes demo1{	
+	0%{
+		-webkit-transform: scale(1,1);
+	}	
+	50%{
+		-webkit-transform: scale(1.1,1);
+	}	
+	100%{
+		-webkit-transform: scale(1,1);
+	}
+}
+/* <!-- 	需要接受外科手术治疗  --> */
+.surgical_treatment{
+	position: absolute;
+	left: 549px;
+	top: 190px;
+	width: 200px;
+	height: 120px;
+}
+.surgical_treatment #image1{
+	position: absolute;
+	width: 123px;
+	height: 32px;
+	
+}
+.surgical_treatment #image1 img{
+	width: 100%;
+	height: 100%;
+}
+.surgical_treatment #image2{
+	position: absolute;
+	width: 89px;
+	height: 106px;
+	
+	left: 20px;
+	top: 10px;
+}
+.surgical_treatment #image2 img{
+	width: 100%;
+	height: 100%;
+}
+.surgical_treatment #image3{
+	position: absolute;
+	width: 128px;
+	height: 128px;
+	
+	left: 37px;
+	top: -23px;
+}
+.surgical_treatment #image3 img{
+	width: 100%;
+	height: 100%;
+	-webkit-transform: rotate(-7deg);
+}
+.surgical_treatment #image4{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	opacity:0;
+	left: 37px;
+	top: 90px;
+}
+.surgical_treatment #image4 img{
+	width: 100%;
+	height: 100%;
+}
+.surgical_treatment #image5{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	opacity:0;
+	left: 67px;
+	top: 80px;
+}
+.surgical_treatment #image5 img{
+	width: 100%;
+	height: 100%;
+}
+.surgical_treatment #image6{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	opacity:0;
+	left: 97px;
+	top: 65px;
+}
+.surgical_treatment #image6 img{
+	width: 100%;
+	height: 100%;
+}
+
+.surgical_treatment #t{
+	position: absolute;
+	left: 10px;
+	top: 120px;
+	font-size: 16px;
+	font-style: normal;
+	color: black;
+	font-weight: bold;
+}
+.a3{	
+	-webkit-animation:demo3 2s ease-out infinite;
+}
+@-webkit-keyframes demo3{	
+	from {
+	    left: 37px;
+		top: -23px;
+	  }
+	to {
+	    left: 90px;
+		top: -45px;
+	  }
+}
+.a5{	
+	-webkit-animation:demo5 2s ease-in infinite;
+}
+@-webkit-keyframes demo5{	
+	from {
+	    left: 37px;
+		top: 90px;
+		opacity:0;
+	  }
+	50%{
+		top: 95px;
+		opacity:0.8;
+	}	
+	to {
+		left: 37px;
+	    top: 100px;
+		opacity:1;
+	}
+}
+.a6{	
+	-webkit-animation:demo6 2s ease-out infinite;
+}
+@-webkit-keyframes demo6{	
+	from {
+	    left: 67px;
+		top: 80px;
+		opacity:0;
+	  }
+	50%{
+		top: 82px;
+		opacity:0.8;
+	}	
+	to {
+		left: 67px;
+	    top: 85px;
+		opacity:1;
+	}
+}
+.a7{	
+	-webkit-animation:demo7 2s ease-out infinite;
+}
+@-webkit-keyframes demo7{	
+	from {
+	    left: 97px;
+		top: 65px;
+	  }
+	50%{
+		top: 70px;
+		opacity:0.8;
+	}	
+	to {
+		left: 97px;
+	    top: 75px;
+		opacity:1;
+	}
+}
+/* <!-- 	发生急性尿储留	 --> */
+.acute_urinary_retention{
+	position: absolute;
+	left: 149px;
+	top: 490px;
+	width: 200px;
+	height: 200px;
+}
+.acute_urinary_retention #image1{
+	position: absolute;
+	width: 138px;
+	height: 187px;
+}
+.acute_urinary_retention #image1 img{
+	width: 100%;
+	height: 100%;
+}
+.acute_urinary_retention #image2{
+	position: absolute;
+	width: 110px;
+	height: 76px;
+	left: 13px;
+	top: 26px;
+}
+.acute_urinary_retention #image2 img{
+	width: 100%;
+	height: 100%;
+}
+.acute_urinary_retention #image3{
+	position: absolute;
+	width: 110px;
+	height: 76px;
+	left: 13px;
+	top: 30px;
+}
+.acute_urinary_retention #image3 img{
+	width: 100%;
+	height: 100%;
+}
+.acute_urinary_retention #t{
+	position: absolute;
+	left: 10px;
+	top: 190px;
+	font-size: 16px;
+	font-style: normal;
+	color: black;
+	font-weight: bold;
+}
+.a2{	
+	-webkit-animation:demo2 2s ease-out infinite;
+}
+@-webkit-keyframes demo2{	
+	from {
+	    top: 31px;
+	    -webkit-transform: scale(1,1);
+	  }
+	0%{
+		top: 39px;
+		-webkit-transform: scale(1.05,0.85);
+	}	
+	25%{
+		top: 47px;
+		-webkit-transform: scale(1.1,0.7);
+	}
+	40%{
+		top: 52px;
+		-webkit-transform: scale(1.11,0.6);
+	}
+	50%{
+		top: 60px;
+		-webkit-transform: scale(1,0.4);
+	}	
+	60%{
+		top: 52px;
+		-webkit-transform: scale(1.11,0.6);
+	}
+	75%{
+		top: 47px;
+		-webkit-transform: scale(1.1,0.7);
+	}
+	100%{
+		top: 39px;
+		-webkit-transform: scale(1.05,0.85);
+	}
+	to {
+	    top: 31px;
+	    -webkit-transform: scale(1,1);
+	  }
+}
+/* 发生急性尿储留或需要接受BPH相关手术 */
+.bhp_related_to_surgery{
+	position: absolute;
+	left: 549px;
+	top: 490px;
+	width: 320px;
+	height: 120px;
+}
+.bhp_related_to_surgery #image1{
+	position: absolute;
+	width: 138px;
+	height: 187px;
+	
+}
+.bhp_related_to_surgery #image1 img{
+	width: 100%;
+	height: 100%;
+}
+.bhp_related_to_surgery #image2{
+	position: absolute;
+	width: 110px;
+	height: 76px;
+	left: 13px;
+	top: 26px;
+}
+.bhp_related_to_surgery #image2 img{
+	width: 100%;
+	height: 100%;
+}
+.bhp_related_to_surgery #image3{
+	position: absolute;
+	width: 110px;
+	height: 76px;
+	left: 13px;
+	top: 29px;
+}
+.bhp_related_to_surgery #image3 img{
+	width: 100%;
+	height: 100%;
+}
+.bhp_related_to_surgery #image4{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	
+	left: 40px;
+	top: 88px;
+}
+.bhp_related_to_surgery #image4 img{
+	width: 100%;
+	height: 100%;
+}
+.bhp_related_to_surgery #image5{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	opacity:0;
+	left: 37px;
+	top: 155px;
+}
+.bhp_related_to_surgery #image5 img{
+	width: 100%;
+	height: 100%;
+}
+.bhp_related_to_surgery #image6{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	opacity:0;
+	left: 67px;
+	top: 145px;
+}
+.bhp_related_to_surgery #image6 img{
+	width: 100%;
+	height: 100%;
+}
+.bhp_related_to_surgery #image7{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	opacity:0;
+	left: 95px;
+	top: 135px;
+}
+.bhp_related_to_surgery #image7 img{
+	width: 100%;
+	height: 100%;
+}
+.bhp_related_to_surgery #t{
+	position: absolute;
+	left: 10px;
+	top: 190px;
+	font-size: 16px;
+	font-style: normal;
+	color: black;
+	font-weight: bold;
+}
+.a4{	
+	-webkit-animation:demo4 2s ease-out infinite;
+}
+@-webkit-keyframes demo4{	
+	from {
+	    left: 40px;
+		top: 88px;
+	  }
+	to {
+	    left: 90px;
+		top: 75px;
+	  }
+}
+
+.a8{	
+	-webkit-animation:demo8 2s ease-in infinite;
+}
+@-webkit-keyframes demo8{	
+	from {
+	    left: 37px;
+		top: 155px;
+		opacity:0;
+	  }
+	50%{
+		top: 157px;
+		opacity:0.8;
+	}	
+	to {
+		left: 37px;
+	    top: 160px;
+		opacity:1;
+	}
+}
+.a9{	
+	-webkit-animation:demo9 2s ease-out infinite;
+}
+@-webkit-keyframes demo9{	
+	from {
+	    left: 67px;
+		top: 145px;
+		opacity:0;
+	  }
+	50%{
+		top: 146px;
+		opacity:0.8;
+	}	
+	to {
+		left: 67px;
+	    top: 148px;
+		opacity:1;
+	}
+}
+.a10{	
+	-webkit-animation:demo10 2s ease-out infinite;
+}
+@-webkit-keyframes demo10{	
+	from {
+	    left: 95px;
+		top: 135px;
+	  }
+	50%{
+		top: 137px;
+		opacity:0.8;
+	}	
+	to {
+		left: 97px;
+	    top: 140px;
+		opacity:1;
+	}
+}
+
+/* 显示器 div */
+.monitor{
+	position: absolute;
+	left: 249px;
+	top: 290px;
+	width: 320px;
+	height: 300px;
+}
+.monitor #image_div1{
+	position: absolute;
+	left: 100px;
+	top: 50px;
+	width: 150px;
+	height: 150px;
+}
+.monitor #image_div1 img{
+	width: 100%;
+	height: 100%;
+}
+.monitor #image_div2{
+	position: absolute;
+	left: 160px;
+	top: 95px;
+	width: 50px;
+	height: 36px;
+}
+.monitor #image_div2 img{
+	width: 100%;
+	height: 100%;
+}
+.monitor #image_div3{
+	position: absolute;
+	left: 160px;
+	top: 100px;
+	font-size: 26px;
+	color: white;
+	font-weight: bolder;
+	-webkit-transform: rotate(-20deg);
+}
+.monitor #image_div4{
+	position: absolute;
+	left: 170px;
+	top: 123px;
+	width: 50px;
+	height: 26px;
+	max-width: 50px;
+	max-height: 26px;
+}
+.monitor #left_top{
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	width: 41px;
+	height: 46px;
+}
+.monitor #left_top img{
+	width: 100%;
+	height: 100%;
+}
+.monitor #right_top{
+	-webkit-transform: rotate(90deg);
+	position: absolute;
+	left: 240px;
+	top: 10px;
+	width: 41px;
+	height: 46px;
+}
+.monitor #right_top img{
+	width: 100%;
+	height: 100%;
+}
+.monitor #left_bottom{
+	-webkit-transform: rotate(270deg);
+	position: absolute;
+	left: 70px;
+	top: 200px;
+	width: 41px;
+	height: 46px;
+}
+.monitor #left_bottom img{
+	width: 100%;
+	height: 100%;
+}
+.monitor #right_bottom{
+	-webkit-transform: rotate(180deg);
+	position: absolute;
+	left: 240px;
+	top: 200px;
+	width: 41px;
+	height: 46px;
+}
+.monitor #right_bottom img{
+	width: 100%;
+	height: 100%;
+}
+
+/* 右侧选择条 */
+.choose_item{
+	float: right;
+	position: absolute;
+	left: 749px;
+	top: 190px;
+	width: 200px;
+	height: 500px;
+	z-index: 1;
+}
+.choose_item #cav1{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 0px;
+	top: 0px;
+}
+.choose_item #cav2{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 0px;
+	top: 100px;
+}
+.choose_item #cav3{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 0px;
+	top: 200px;
+}
+.choose_item #cav4{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 0px;
+	top: 300px;
+}
+
+/* 对号和错误符号显示 */
+.error_or_checkmark{
+	position: absolute;
+	left: 350px;
+	top: 190px;
+	width: 167px;
+	height: 144px
+}
+
+.error_or_checkmark canvas{
+	width: 167px;
+	height: 144px
+}
+
+.right_arrow{
+	position: absolute;
+	left: 920px;
+	top: 650px;
+	opacity: 1;
+	width: 104px;
+	height: 70px;
+}
+.left_arrow{
+	position: absolute;
+	left: 20px;
+	top: 650px;
+	opacity: 1;
+	width: 104px;
+	height: 70px;
+}
+

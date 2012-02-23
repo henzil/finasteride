@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="./js/error_image.js"></script>
+<script type="text/javascript" src="./js/checkmark_image.js"></script>
+<link rel="stylesheet" href="./css/b_h_p_page.css" />
+</head>
+<body>
+
+<div class="all">
+<!-- 	左上角文字 -->
+	<div class="left_top_text">
+		您知道BPH患者发生下列情况的概率是多少吗？
+	</div>
+	<!--  右上角图片 -->
+	<div class="right_top">
+		<div class="left">
+			<img alt="" src="./image/L0/L0-2.png">
+		</div>
+		<div class="right">
+			<img alt="" src="./image/L0/L0-1.png">
+		</div>
+	</div>
+	
+<!-- 	前列腺体积变大 -->
+	<div class="prostate_volume_was_larger">
+		<div id="image1">
+			<img alt="" src="./image/L2/L2-6.png">
+		</div>
+		<div id="image2">
+			<img alt="" src="./image/L2/L2-11.png">
+		</div>
+		<div id="t">
+			前列腺体积变大
+		</div>
+	</div>
+	
+	<!-- 	需要接受外科手术治疗  -->
+	<div class="surgical_treatment">
+		<div id="image1">
+			<img alt="" src="./image/L2/L2-6.png">
+		</div>
+		<div id="image2">
+			<img alt="" src="./image/L2/L2-11.png">
+		</div>
+		<div id="image3">
+			<img alt="" src="./image/L2/L2-3.png">
+		</div>
+		<div id="image4">
+			<img alt="" src="./image/L2/L2-12.png">
+		</div>
+		<div id="image5">
+			<img alt="" src="./image/L2/L2-12.png">
+		</div>
+		<div id="image6">
+			<img alt="" src="./image/L2/L2-12.png">
+		</div>
+		
+		<div id="t">
+			需要接受外科手术治疗
+		</div>
+	</div>
+<!-- 	发生急性尿储留	 -->
+	<div class="acute_urinary_retention">
+		<div id="image2">
+			<img alt="" src="./image/L2/L2-13.png">
+		</div>
+		<div id="image3">
+			<img alt="" src="./image/L2/L2-7.png">
+		</div>
+		<div id="image1">
+			<img alt="" src="./image/L2/L2-14.png">
+		</div>
+		<div id="t">
+			发生急性尿储留
+		</div>
+	</div>
+	
+<!-- 	发生急性尿储留或需要接受BPH相关手术 -->
+	<div class="bhp_related_to_surgery">
+		
+		<div id="image2">
+			<img alt="" src="./image/L2/L2-13.png">
+		</div>
+		<div id="image3">
+			<img alt="" src="./image/L2/L2-7.png">
+		</div>
+		<div id="image1">
+			<img alt="" src="./image/L2/L2-14.png">
+		</div>
+		<div id="image4">
+			<img alt="" src="./image/L2/L2-3.png">
+		</div>
+		<div id="image5">
+			<img alt="" src="./image/L2/L2-12.png">
+		</div>
+		<div id="image6">
+			<img alt="" src="./image/L2/L2-12.png">
+		</div>
+		<div id="image7">
+			<img alt="" src="./image/L2/L2-12.png">
+		</div>
+		<div id="t">
+			发生急性尿储留或需要接受BPH相关手术
+		</div>
+	</div>
+<!-- 中间显示器 -->
+	<div class="monitor">
+		<div id="image_div1">
+			<img alt="" src="./image/L2/L2-2.png">
+		</div>
+		<div id="image_div2">
+			<img alt="" src="./image/L2/L2-4.png">
+		</div>
+		<div id="image_div3">
+			BPH
+		</div>
+		<div id="image_div4">
+			<canvas id="line_canvas"></canvas>
+		</div>
+
+		<div id="left_top">
+			<img alt="" src="./image/L2/L2-5.png">
+		</div>
+		<div id="right_top">
+			<img alt="" src="./image/L2/L2-5.png">
+		</div>
+		<div id="left_bottom">
+			<img alt="" src="./image/L2/L2-5.png">
+		</div>
+		<div id="right_bottom">
+			<img alt="" src="./image/L2/L2-5.png">
+		</div>
+	</div>
+<!-- 	右侧条 -->
+	<div class="choose_item">
+		<div id="cav1">
+			<img alt="" src="./image/L2/L2-15.jpg">
+		</div>
+		<div id="cav2">
+			<img alt="" src="./image/L2/L2-16.jpg">
+		</div>
+		<div id="cav3">
+			<img alt="" src="./image/L2/L2-17.jpg">
+		</div>
+		<div id="cav4">
+			<img alt="" src="./image/L2/L2-18.jpg">
+		</div>
+	
+	</div>
+	
+<!-- 	正确和错误提示 -->
+	<div class="error_or_checkmark">
+		<canvas id="myCanvas"></canvas>
+	</div>
+	<div class="left_arrow">
+		<a href="./index.html"><img alt="" src="./image/left_arrow.png"></a>
+	</div>
+	<div class="right_arrow">
+		<a href="./disease_incidence.html"><img alt="" src="./image/right_arrow.png"></a>
+	</div>
+</div>
+
+<script type="text/javascript">
+$('.left').addClass('transition1');
+var c = document.getElementById("line_canvas");
+var ctx=c.getContext("2d");
+// ctx.fillStyle = "red";
+ctx.strokeStyle = "white"; 
+// ctx.fillStyle = "rgb(255, 255, 255)";
+ctx.lineWidth = 4;
+ctx.beginPath();
+ctx.moveTo(0, 20);
+// ctx.lineTo(40, 0);
+ctx.bezierCurveTo(0, 20, 0, 10, 40, 0);
+ctx.stroke();
+
+$('.prostate_volume_was_larger #image2').children('img').addClass('a1');
+$('.surgical_treatment #image3').addClass('a3');
+$('.surgical_treatment #image4').addClass('a5');
+$('.surgical_treatment #image5').addClass('a6');
+$('.surgical_treatment #image6').addClass('a7');
+$('.acute_urinary_retention #image3').addClass('a2');
+$('.bhp_related_to_surgery #image3').addClass('a2');
+$('.bhp_related_to_surgery #image4').addClass('a4');
+$('.bhp_related_to_surgery #image5').addClass('a8');
+$('.bhp_related_to_surgery #image6').addClass('a9');
+$('.bhp_related_to_surgery #image7').addClass('a10');
+</script>
+
+<script type="text/javascript">
+function createDragAndMoveElement(element){
+// 	console.log('element.id='+element.id);
+	var isDown = false;
+	$(element).on('mousedown',function(e){
+		$(element).css('z-index',$('.choose_item')[0].zIndex++);
+		element.last={'x':e.pageX,
+					  'y':e.pageY};
+		element.position=element.position||{'x':0,'y':0};
+		isDown = true;
+		return false;
+	});
+	$(element).on('mousemove',function(e){
+		if(isDown){
+			element.position.x=element.position.x+e.pageX-element.last.x;
+			element.position.y=element.position.y+e.pageY-element.last.y;
+			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+// 			console.log('mousemove e.pageX='+e.pageX);
+// 			console.log('mousemove e.pageY='+e.pageY);
+			element.last={'x':e.pageX, 'y':e.pageY};
+			
+		}
+	});
+	$(element).on('mouseup',function(e){
+// 		console.log('>>end');
+		isDown = false;
+		var isChoose;
+		
+		if(element.id == 'cav1'){
+			isChoose = $(".prostate_volume_was_larger");
+			
+		}
+		if(element.id == 'cav2'){
+			isChoose = $(".surgical_treatment");
+		}
+		if(element.id == 'cav3'){
+			isChoose = $(".bhp_related_to_surgery");
+		}
+		if(element.id == 'cav4'){
+			isChoose = $(".acute_urinary_retention");
+		}
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageY-isChoose.position().top-isChoose.parent().position().top) > 0));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageX-isChoose.position().left-isChoose.parent().position().left) > 0));
+		if(((e.pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()) &&
+				((e.pageY-isChoose.position().top-isChoose.parent().position().top) > 0) &&
+				((e.pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()) &&
+				((e.pageX-isChoose.position().left-isChoose.parent().position().left) > 0)){
+			console.log('#########true');
+// 			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawCheckmarkImage(ctx);
+			playCheckmark();
+		} else {
+			playError();
+			var c = document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			drawErrorImage(ctx);
+			$(element).css('-webkit-transform','translate(0,0)');
+			element.position={'x':0,
+					  'y':0};
+		}
+// 		console.log('^^^^^'+e.pageX);
+// 		console.log('^^^^^'+isChoose.position().left);
+// 		console.log('^^^^^'+isChoose.width());
+	});
+
+	
+	$(element).on('webkitTransitionEnd',function(e){
+		$(element).css({
+			'-webkit-transition-duration':'0'
+		});
+	});
+	
+	$(".prostate_volume_was_larger").mouseup(function(){
+		console.log('>>end>>>>'+isDown);
+      
+    });
+}
+
+var elements=$('.choose_item').children('div');
+$.each(elements,function(){
+	createDragAndMoveElement(this);
+});
+$('.choose_item')[0].zIndex=1;
+
+function playError() 
+{ 
+	var snd = new Audio("./mp3/error.mp3");
+	snd.play();
+} 
+function playCheckmark() 
+{ 
+	var snd = new Audio("./mp3/checkmark.mp3");
+	snd.play();
+} 
+</script>
+
+</body>
+</html>

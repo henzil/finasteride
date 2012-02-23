@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+html{
+	background-color: red;
+	margin: 0px;
+}
+body{
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	background-image: url("../image/L2/L2-bg.png");
+	margin: 0px auto;
+}
+.all{
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	margin: 0px auto;
+}
+#text{
+	font-size: 20px;
+	font-style: normal;
+	color: black;
+	font-weight: bold;
+}
+
+.left_top_text{
+	position: absolute;
+	float: left;
+	width: 550px;
+	height: 54px;
+	top: 24px;
+	left: 20px;
+	color: white;
+	font-size: 25px;
+	font-style: inherit;
+	margin: 0px auto;
+}
+
+.right_top{
+	width: auto;
+	height: 54px;
+	float: right;
+	position: absolute;
+	top: 10px;
+	left: 840px;
+	opacity: 1;
+}
+.right_top .left{
+	width: 44px;
+	height: 40px;
+	position: absolute;
+	left: 0px;
+	top: 20px;
+	
+}
+.right_top .left img{
+	width: 100%;
+	height: 100%;
+}
+
+.transition1{
+	-webkit-transform: rotate(360deg);
+	-webkit-transition-delay: 2s;
+	-webkit-transition-duration: 2s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-out;
+}
+
+.right_top .right{
+	width: 108px;
+	height: 70px;
+	position: absolute;
+	left: 59px;
+	top: 10px;
+}
+
+.right_top .right img{
+	width: 100%;
+	height: 100%;
+}
+/* 右侧底部手指滑动选择年龄 */
+.right_bottom{
+	width: 419px;
+	height: 121px;
+	position: absolute;
+	left: 659px;
+	top: 600px;
+}
+
+.right_bottom #bottom{
+	width: 419px;
+	height: 121px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.right_bottom #bottom img{
+	width: 100%;
+	height: 100%;
+}
+.right_bottom #middle{
+	width: 419px;
+	height: 121px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.right_bottom #middle img{
+	width: 100%;
+	height: 100%;
+}
+.right_bottom #top{
+/* 	width: 210px; */
+/* 	height: 61px; */
+/* 	position: absolute; */
+/* 	left: 0px; */
+/* 	top: 0px; */
+}
+.right_bottom #top img{
+	width: 100%;
+	height: 100%;
+}
+
+/* 中间路 div */
+.middle_road{
+	
+}
+
