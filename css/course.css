@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+html{
+	background-color: white;
+}
+body{
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	background-image: url("../image/L1/course.jpg");
+	margin: 0px auto;
+}
+.all{
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	max-width: 1024px;
+	max-height: 768px;
+	margin: 0px auto;
+}
+
+
+
+
+
+
+
+
+
+
+.right_arrow{
+	position: absolute;
+	left: 920px;
+	top: 650px;
+	opacity: 1;
+	width: 104px;
+	height: 70px;
+}
+.left_arrow{
+	position: absolute;
+	left: 20px;
+	top: 650px;
+	opacity: 1;
+	width: 104px;
+	height: 70px;
+}

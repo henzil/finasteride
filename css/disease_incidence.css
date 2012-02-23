@@ -184,3 +184,20 @@ body{
 	width: 167px;
 	height: 144px
 }
+
+.right_arrow{
+	position: absolute;
+	left: 920px;
+	top: 650px;
+	opacity: 1;
+	width: 104px;
+	height: 70px;
+}
+.left_arrow{
+	position: absolute;
+	left: 20px;
+	top: 650px;
+	opacity: 1;
+	width: 104px;
+	height: 70px;
+}
