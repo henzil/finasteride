@@ -301,10 +301,10 @@ function createDragAndMoveElement(element){
 // 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.originalEvent.touches[0].pageY-isChoose.position().top-isChoose.parent().position().top) > 0));
 // 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()));
 // 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) > 0));
-		if(((e.originalEvent.touches[0].pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()) &&
-				((e.originalEvent.touches[0].pageY-isChoose.position().top-isChoose.parent().position().top) > 0) &&
-				((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()) &&
-				((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) > 0)){
+		if(((element.last.y-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()) &&
+				((element.last.y-isChoose.position().top-isChoose.parent().position().top) > 0) &&
+				((element.last.x-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()) &&
+				((element.last.x-isChoose.position().left-isChoose.parent().position().left) > 0)){
 // 			console.log('#########true');
 			playCheckmark();
 // 			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
