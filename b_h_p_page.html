@@ -240,12 +240,12 @@ function createDragAndMoveElement(element){
 				((e.pageY-isChoose.position().top-isChoose.parent().position().top) > 0) &&
 				((e.pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()) &&
 				((e.pageX-isChoose.position().left-isChoose.parent().position().left) > 0)){
-			console.log('#########true');
+// 			console.log('#########true');
+			playCheckmark();	
 // 			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
 			var c = document.getElementById("myCanvas");
 			var ctx=c.getContext("2d");
 			drawCheckmarkImage(ctx);
-			playCheckmark();
 		} else {
 			playError();
 			var c = document.getElementById("myCanvas");
@@ -262,20 +262,20 @@ function createDragAndMoveElement(element){
 	
 	$(element).on('touchstart',function(e){
 		$(element).css('z-index',$('.choose_item')[0].zIndex++);
-		element.last={'x':e.pageX,
-					  'y':e.pageY};
+		element.last={'x':e.originalEvent.touches[0].pageX,
+					  'y':e.originalEvent.touches[0].pageY};
 		element.position=element.position||{'x':0,'y':0};
 		isDown = true;
 		return false;
 	});
 	$(element).on('touchmove',function(e){
 		if(isDown){
-			element.position.x=element.position.x+e.pageX-element.last.x;
-			element.position.y=element.position.y+e.pageY-element.last.y;
+			element.position.x=element.position.x+e.originalEvent.touches[0].pageX-element.last.x;
+			element.position.y=element.position.y+e.originalEvent.touches[0].pageY-element.last.y;
 			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
-// 			console.log('mousemove e.pageX='+e.pageX);
-// 			console.log('mousemove e.pageY='+e.pageY);
-			element.last={'x':e.pageX, 'y':e.pageY};
+// 			console.log('mousemove e.originalEvent.touches[0].pageX='+e.originalEvent.touches[0].pageX);
+// 			console.log('mousemove e.originalEvent.touches[0].pageY='+e.originalEvent.touches[0].pageY);
+			element.last={'x':e.originalEvent.touches[0].pageX, 'y':e.originalEvent.touches[0].pageY};
 			
 		}
 	});
@@ -297,20 +297,21 @@ function createDragAndMoveElement(element){
 		if(element.id == 'cav4'){
 			isChoose = $(".acute_urinary_retention");
 		}
-// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()));
-// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageY-isChoose.position().top-isChoose.parent().position().top) > 0));
-// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()));
-// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.pageX-isChoose.position().left-isChoose.parent().position().left) > 0));
-		if(((e.pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()) &&
-				((e.pageY-isChoose.position().top-isChoose.parent().position().top) > 0) &&
-				((e.pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()) &&
-				((e.pageX-isChoose.position().left-isChoose.parent().position().left) > 0)){
-			console.log('#########true');
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.originalEvent.touches[0].pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.originalEvent.touches[0].pageY-isChoose.position().top-isChoose.parent().position().top) > 0));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()));
+// 		console.log('!!!!!!!!!!!!!!!!!!!!'+((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) > 0));
+		if(((e.originalEvent.touches[0].pageY-isChoose.position().top-isChoose.parent().position().top) < isChoose.height()) &&
+				((e.originalEvent.touches[0].pageY-isChoose.position().top-isChoose.parent().position().top) > 0) &&
+				((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) < isChoose.width()) &&
+				((e.originalEvent.touches[0].pageX-isChoose.position().left-isChoose.parent().position().left) > 0)){
+// 			console.log('#########true');
+			playCheckmark();
 // 			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
 			var c = document.getElementById("myCanvas");
 			var ctx=c.getContext("2d");
 			drawCheckmarkImage(ctx);
-			playCheckmark();
+			
 		} else {
 			playError();
 			var c = document.getElementById("myCanvas");
@@ -320,7 +321,7 @@ function createDragAndMoveElement(element){
 			element.position={'x':0,
 					  'y':0};
 		}
-// 		console.log('^^^^^'+e.pageX);
+// 		console.log('^^^^^'+e.originalEvent.touches[0].pageX);
 // 		console.log('^^^^^'+isChoose.position().left);
 // 		console.log('^^^^^'+isChoose.width());
 	});

@@ -129,8 +129,8 @@ function createDragAndMoveElement(element){
 	});
 	$(element).on('touchstart',function(e){
 		$(element).css('z-index',$('.right_bottom #top').zIndex++);
-		element.last={'x':e.pageX,
-					  'y':e.pageY};
+		element.last={'x':e.originalEvent.touches[0].pageX,
+					  'y':e.originalEvent.touches[0].pageY};
 		element.position=element.position||{'x':0,'y':0};
 		isDown = true;
 		indexPosition = 0;
@@ -138,13 +138,13 @@ function createDragAndMoveElement(element){
 	});
 	$(element).on('touchmove',function(e){
 		if(isDown){
-			element.position.x=element.position.x+e.pageX-element.last.x;
+			element.position.x=element.position.x+e.originalEvent.touches[0].pageX-element.last.x;
 			element.position.y=0;
 			$(element).css('-webkit-transform','translate('+element.position.x+'px,'+element.position.y+'px)');
 			console.log('mousemove element.position.x='+element.position.x);
-			console.log('mousemove e.pageX='+e.pageX);
-			console.log('mousemove e.pageY='+e.pageY);
-			element.last={'x':e.pageX, 'y':e.pageY};
+			console.log('mousemove e.originalEvent.touches[0].pageX='+e.originalEvent.touches[0].pageX);
+			console.log('mousemove e.originalEvent.touches[0].pageY='+e.originalEvent.touches[0].pageY);
+			element.last={'x':e.originalEvent.touches[0].pageX, 'y':e.originalEvent.touches[0].pageY};
 			indexPosition = element.position.x;
 			drawCanvas();
 			drawPeople();
