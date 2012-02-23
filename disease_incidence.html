@@ -25,10 +25,52 @@
 	</div>
 <!-- 	中间路 div -->
 	<div class="middle_road">
-		<div id="image_bg"><img alt="" src="./image/L4/L4-3.png" /></div>
-		
-		
-		<div id="image_05"><img alt="" src="./image/L4/L4-1.png" /></div>
+		<div id="image_bg">
+			<img alt="" src="./image/L4/L4-3.png" />
+		</div>
+		<div id="image_01">
+			<img alt="" src="./image/L4/L4-1.png" />
+		</div>
+		<div id="t1">
+			41-50岁
+		</div>
+		<div id="t1_1">
+			13.2%
+		</div>
+		<div id="image_02">
+			<img alt="" src="./image/L4/L4-1.png" />
+		</div>
+		<div id="t2">
+			51-60岁
+		</div>
+		<div id="t2_2">
+			20.0%
+		</div>
+		<div id="image_03">
+			<img alt="" src="./image/L4/L4-1.png" />
+		</div>
+		<div id="t3">
+			61-70岁
+		</div>
+		<div id="t3_3">
+			50.0%
+		</div>
+		<div id="image_04">
+			<img alt="" src="./image/L4/L4-1.png" />
+		</div>
+		<div id="t4">
+			71-80岁
+		</div>
+		<div id="t4_4">
+			57.1%
+		</div>
+		<div id="image_05">
+			<div id="text_05"></div>
+			<img alt="" src="./image/L4/L4-1.png" />
+		</div>
+		<div id="t5">
+			81-90岁
+		</div>
 	</div>
 	
 	<!--  右下角图片 -->
@@ -61,8 +103,6 @@
 $('.left').addClass('transition1');
 
 
-
-
 </script>
 
 <script type="text/javascript">
@@ -91,6 +131,7 @@ function createDragAndMoveElement(element){
 			indexPosition = element.position.x;
 			drawCanvas();
 			drawPeople();
+			$("#text_05").text(""+(Math.round((indexPosition/3)*10)/10)+"%");
 		}
 	});
 	$(element).on('mouseover',function(e){
@@ -104,6 +145,7 @@ function createDragAndMoveElement(element){
 			indexPosition = element.position.x;
 			drawCanvas();
 			drawPeople();
+			$("#text_05").text(""+(Math.round((indexPosition/3)*10)/10)+"%");
 		}
 	});
 	$(element).on('mouseout',function(e){
@@ -116,6 +158,8 @@ function createDragAndMoveElement(element){
 			element.last={'x':e.pageX, 'y':e.pageY};
 			indexPosition = element.position.x;
 			drawCanvas();
+			drawPeople();
+			$("#text_05").text(""+(Math.round((indexPosition/3)*10)/10)+"%");
 		}
 	});
 	$(element).on('mouseup',function(e){
@@ -156,6 +200,7 @@ function createDragAndMoveElement(element){
 			indexPosition = element.position.x;
 			drawCanvas();
 			drawPeople();
+			$("#text_05").text(""+(Math.round((indexPosition/3)*10)/10)+"%");
 		}
 	});
 	$(element).on('touchend',function(e){
