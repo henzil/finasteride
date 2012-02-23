@@ -126,7 +126,7 @@ body{
 	left: 560px;
 	top: 680px;
 	opacity: 0;
-	width: 255px;
+	width: 155px;
 	height: 50px;
 	
 }
@@ -163,7 +163,7 @@ body{
 	-webkit-transition-duration: 1s;
 	-webkit-transition-property: all;
 	-webkit-transition-timing-function: ease-in-out;
-	left: 760px;
+	left: 660px;
 	top: 550px;
 }
 .right_arrow{
