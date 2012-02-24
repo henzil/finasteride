@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 html{
-	background-color: red;
+	background-color: white;
 	margin: 0px;
 }
 body{
@@ -8,13 +8,14 @@ body{
 	height: 768px;
 	max-width: 1024px;
 	max-height: 768px;
-	background-image: url("../image/L2/L2-bg.png");
+	
 	margin: 0px auto;
 }
 .all{
 	position: absolute;
 	width: 1024px;
 	height: 768px;
+	background-image: url("../image/L2/L2-bg.png");
 	max-width: 1024px;
 	max-height: 768px;
 	margin: 0px auto;

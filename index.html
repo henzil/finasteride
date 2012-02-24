@@ -23,21 +23,21 @@
 <script type="text/javascript">
 $('.all_page').empty();
 $('.all_page').load('./first.html',function(){
-	$('.left').addClass('transition1');
-	$('.right_bottom').addClass('transition2');
-	$('.right_top').addClass('transition3');
-	$('.left_top_text').addClass('transition4');
-	$('.bottom').addClass('transition5');
+	$('.f_left').addClass('f_transition1');
+	$('.f_right_bottom').addClass('f_transition2');
+	$('.f_right_top').addClass('f_transition3');
+	$('.f_left_top_text').addClass('f_transition4');
+	$('.f_bottom').addClass('f_transition5');
 });
 
 function load_first(){
 	$('.all_page').empty();
 	$('.all_page').load('./first.html',function(){
-		$('.left').addClass('transition1');
-		$('.right_bottom').addClass('transition2');
-		$('.right_top').addClass('transition3');
-		$('.left_top_text').addClass('transition4');
-		$('.bottom').addClass('transition5');
+		$('.f_left').addClass('f_transition1');
+		$('.f_right_bottom').addClass('f_transition2');
+		$('.f_right_top').addClass('f_transition3');
+		$('.f_left_top_text').addClass('f_transition4');
+		$('.f_bottom').addClass('f_transition5');
 	});
 }
 function load_course(){
@@ -46,11 +46,52 @@ function load_course(){
 }
 function load_bhp(){
 	$('.all_page').empty();
-	$('.all_page').load('./b_h_p_page.html');
+	$('.all_page').load('./b_h_p_page.html',function(){
+		$('.b_right_top .left').addClass('b_transition1');
+		var c = document.getElementById("line_canvas");
+		var ctx=c.getContext("2d");
+		// ctx.fillStyle = "red";
+		ctx.strokeStyle = "white"; 
+		// ctx.fillStyle = "rgb(255, 255, 255)";
+		ctx.lineWidth = 4;
+		ctx.beginPath();
+		ctx.moveTo(0, 20);
+		// ctx.lineTo(40, 0);
+		ctx.bezierCurveTo(0, 20, 0, 10, 40, 0);
+		ctx.stroke();
+
+		$('.b_prostate_volume_was_larger #image2').children('img').addClass('b_a1');
+		$('.b_surgical_treatment #image3').addClass('b_a3');
+		$('.b_surgical_treatment #image4').addClass('b_a5');
+		$('.b_surgical_treatment #image5').addClass('b_a6');
+		$('.b_surgical_treatment #image6').addClass('b_a7');
+		$('.b_acute_urinary_retention #image3').addClass('b_a2');
+		$('.b_bhp_related_to_surgery #image3').addClass('b_a2');
+		$('.b_bhp_related_to_surgery #image4').addClass('b_a4');
+		$('.b_bhp_related_to_surgery #image5').addClass('b_a8');
+		$('.b_bhp_related_to_surgery #image6').addClass('b_a9');
+		$('.b_bhp_related_to_surgery #image7').addClass('b_a10');
+		
+		
+		var elements=$('.b_choose_item').children('div');
+		$.each(elements,function(){
+			createDragAndMoveElement(this);
+		});
+		$('.b_choose_item')[0].zIndex=1;
+	});
 }
 function load_disease_incidence(){
 	$('.all_page').empty();
-	$('.all_page').load('./disease_incidence.html');
+	$('.all_page').load('./disease_incidence.html',function(){
+		$('.left').addClass('transition1');
+		
+		var indexPosition;
+		var element=$('.right_bottom #top');
+		$.each(element,function(){
+			createDragAndMoveElement(this);
+		});
+		$('.right_bottom #top').zIndex=1;
+	});
 }
 
 </script>

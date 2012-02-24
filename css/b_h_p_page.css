@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 html{
-	background-color: red;
+	background-color: white;
 	margin: 0px;
 }
 body{
@@ -8,10 +8,11 @@ body{
 	height: 768px;
 	max-width: 1024px;
 	max-height: 768px;
-	background-image: url("../image/L2/L2-bg.png");
+	background-color: white;
 	margin: 0px auto;
 }
-.all{
+.b_all{
+	background-image: url("../image/L2/L2-bg.png");
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -19,14 +20,14 @@ body{
 	max-height: 768px;
 	margin: 0px auto;
 }
-#text{
+#b_text{
 	font-size: 20px;
 	font-style: normal;
 	color: black;
 	font-weight: bold;
 }
 
-.left_top_text{
+.b_left_top_text{
 	position: absolute;
 	float: left;
 	width: 550px;
@@ -39,7 +40,7 @@ body{
 	margin: 0px auto;
 }
 
-.right_top{
+.b_right_top{
 	width: auto;
 	height: 54px;
 	float: right;
@@ -48,7 +49,7 @@ body{
 	left: 840px;
 	opacity: 1;
 }
-.right_top .left{
+.b_right_top .left{
 	width: 44px;
 	height: 40px;
 	position: absolute;
@@ -56,12 +57,12 @@ body{
 	top: 20px;
 	
 }
-.right_top .left img{
+.b_right_top .left img{
 	width: 100%;
 	height: 100%;
 }
 
-.transition1{
+.b_transition1{
 	-webkit-transform: rotate(360deg);
 	-webkit-transition-delay: 2s;
 	-webkit-transition-duration: 2s;
@@ -69,7 +70,7 @@ body{
 	-webkit-transition-timing-function: ease-out;
 }
 
-.right_top .right{
+.b_right_top .right{
 	width: 108px;
 	height: 70px;
 	position: absolute;
@@ -77,39 +78,39 @@ body{
 	top: 10px;
 }
 
-.right_top .right img{
+.b_right_top .right img{
 	width: 100%;
 	height: 100%;
 }
 /* <!-- 	前列腺体积变大 --> */
-.prostate_volume_was_larger{
+.b_prostate_volume_was_larger{
 	position: absolute;
 	left: 149px;
 	top: 190px;
 	width: 200px;
 	height: 140px;
 }
-.prostate_volume_was_larger #image1{
+.b_prostate_volume_was_larger #image1{
 	position: absolute;
 	width: 123px;
 	height: 32px;
 }
-.prostate_volume_was_larger #image1 img{
+.b_prostate_volume_was_larger #image1 img{
 	width: 100%;
 	height: 100%;
 }
-.prostate_volume_was_larger #image2{
+.b_prostate_volume_was_larger #image2{
 	position: absolute;
 	width: 89px;
 	height: 106px;
 	left: 20px;
 	top: 10px;
 }
-.prostate_volume_was_larger #image2 img{
+.b_prostate_volume_was_larger #image2 img{
 	width: 100%;
 	height: 100%;
 }
-.prostate_volume_was_larger #t{
+.b_prostate_volume_was_larger #t{
 	position: absolute;
 	left: 10px;
 	top: 120px;
@@ -118,7 +119,7 @@ body{
 	color: black;
 	font-weight: bold;
 }
-.a1{	
+.b_a1{	
 	-webkit-animation:demo1 1s ease-out infinite;
 }
 @-webkit-keyframes demo1{	
@@ -133,24 +134,24 @@ body{
 	}
 }
 /* <!-- 	需要接受外科手术治疗  --> */
-.surgical_treatment{
+.b_surgical_treatment{
 	position: absolute;
 	left: 549px;
 	top: 190px;
 	width: 200px;
 	height: 120px;
 }
-.surgical_treatment #image1{
+.b_surgical_treatment #image1{
 	position: absolute;
 	width: 123px;
 	height: 32px;
 	
 }
-.surgical_treatment #image1 img{
+.b_surgical_treatment #image1 img{
 	width: 100%;
 	height: 100%;
 }
-.surgical_treatment #image2{
+.b_surgical_treatment #image2{
 	position: absolute;
 	width: 89px;
 	height: 106px;
@@ -158,11 +159,11 @@ body{
 	left: 20px;
 	top: 10px;
 }
-.surgical_treatment #image2 img{
+.b_surgical_treatment #image2 img{
 	width: 100%;
 	height: 100%;
 }
-.surgical_treatment #image_canvas{
+.b_surgical_treatment #image_canvas{
 	position: absolute;
 	width: 89px;
 	height: 106px;
@@ -176,7 +177,7 @@ body{
 /* 	top: 55px; */
 /* 	background-color: red; */
 }
-.surgical_treatment #image3{
+.b_surgical_treatment #image3{
 	position: absolute;
 	width: 128px;
 	height: 128px;
@@ -184,12 +185,12 @@ body{
 	left: 37px;
 	top: -23px;
 }
-.surgical_treatment #image3 img{
+.b_surgical_treatment #image3 img{
 	width: 100%;
 	height: 100%;
 	-webkit-transform: rotate(-7deg);
 }
-.surgical_treatment #image4{
+.b_surgical_treatment #image4{
 	position: absolute;
 	width: 20px;
 	height: 20px;
@@ -197,11 +198,11 @@ body{
 	left: 37px;
 	top: 90px;
 }
-.surgical_treatment #image4 img{
+.b_surgical_treatment #image4 img{
 	width: 100%;
 	height: 100%;
 }
-.surgical_treatment #image5{
+.b_surgical_treatment #image5{
 	position: absolute;
 	width: 20px;
 	height: 20px;
@@ -209,11 +210,11 @@ body{
 	left: 67px;
 	top: 80px;
 }
-.surgical_treatment #image5 img{
+.b_surgical_treatment #image5 img{
 	width: 100%;
 	height: 100%;
 }
-.surgical_treatment #image6{
+.b_surgical_treatment #image6{
 	position: absolute;
 	width: 20px;
 	height: 20px;
@@ -221,12 +222,12 @@ body{
 	left: 97px;
 	top: 65px;
 }
-.surgical_treatment #image6 img{
+.b_surgical_treatment #image6 img{
 	width: 100%;
 	height: 100%;
 }
 
-.surgical_treatment #t{
+.b_surgical_treatment #t{
 	position: absolute;
 	left: 10px;
 	top: 120px;
@@ -235,7 +236,7 @@ body{
 	color: black;
 	font-weight: bold;
 }
-.a3{	
+.b_a3{	
 	-webkit-animation:demo3 2s ease-out infinite;
 }
 @-webkit-keyframes demo3{	
@@ -248,7 +249,7 @@ body{
 		top: -45px;
 	  }
 }
-.a5{	
+.b_a5{	
 	-webkit-animation:demo5 2s ease-in infinite;
 }
 @-webkit-keyframes demo5{	
@@ -267,7 +268,7 @@ body{
 		opacity:1;
 	}
 }
-.a6{	
+.b_a6{	
 	-webkit-animation:demo6 2s ease-out infinite;
 }
 @-webkit-keyframes demo6{	
@@ -286,7 +287,7 @@ body{
 		opacity:1;
 	}
 }
-.a7{	
+.b_a7{	
 	-webkit-animation:demo7 2s ease-out infinite;
 }
 @-webkit-keyframes demo7{	
@@ -305,45 +306,45 @@ body{
 	}
 }
 /* <!-- 	发生急性尿储留	 --> */
-.acute_urinary_retention{
+.b_acute_urinary_retention{
 	position: absolute;
 	left: 149px;
 	top: 490px;
 	width: 200px;
 	height: 200px;
 }
-.acute_urinary_retention #image1{
+.b_acute_urinary_retention #image1{
 	position: absolute;
 	width: 138px;
 	height: 187px;
 }
-.acute_urinary_retention #image1 img{
+.b_acute_urinary_retention #image1 img{
 	width: 100%;
 	height: 100%;
 }
-.acute_urinary_retention #image2{
+.b_acute_urinary_retention #image2{
 	position: absolute;
 	width: 110px;
 	height: 76px;
 	left: 13px;
 	top: 26px;
 }
-.acute_urinary_retention #image2 img{
+.b_acute_urinary_retention #image2 img{
 	width: 100%;
 	height: 100%;
 }
-.acute_urinary_retention #image3{
+.b_acute_urinary_retention #image3{
 	position: absolute;
 	width: 110px;
 	height: 76px;
 	left: 13px;
 	top: 30px;
 }
-.acute_urinary_retention #image3 img{
+.b_acute_urinary_retention #image3 img{
 	width: 100%;
 	height: 100%;
 }
-.acute_urinary_retention #t{
+.b_acute_urinary_retention #t{
 	position: absolute;
 	left: 10px;
 	top: 190px;
@@ -352,7 +353,7 @@ body{
 	color: black;
 	font-weight: bold;
 }
-.a2{	
+.b_a2{	
 	-webkit-animation:demo2 2s ease-out infinite;
 }
 @-webkit-keyframes demo2{	
@@ -394,46 +395,46 @@ body{
 	  }
 }
 /* 发生急性尿储留或需要接受BPH相关手术 */
-.bhp_related_to_surgery{
+.b_bhp_related_to_surgery{
 	position: absolute;
 	left: 549px;
 	top: 490px;
 	width: 320px;
 	height: 120px;
 }
-.bhp_related_to_surgery #image1{
+.b_bhp_related_to_surgery #image1{
 	position: absolute;
 	width: 138px;
 	height: 187px;
 	
 }
-.bhp_related_to_surgery #image1 img{
+.b_bhp_related_to_surgery #image1 img{
 	width: 100%;
 	height: 100%;
 }
-.bhp_related_to_surgery #image2{
+.b_bhp_related_to_surgery #image2{
 	position: absolute;
 	width: 110px;
 	height: 76px;
 	left: 13px;
 	top: 26px;
 }
-.bhp_related_to_surgery #image2 img{
+.b_bhp_related_to_surgery #image2 img{
 	width: 100%;
 	height: 100%;
 }
-.bhp_related_to_surgery #image3{
+.b_bhp_related_to_surgery #image3{
 	position: absolute;
 	width: 110px;
 	height: 76px;
 	left: 13px;
 	top: 29px;
 }
-.bhp_related_to_surgery #image3 img{
+.b_bhp_related_to_surgery #image3 img{
 	width: 100%;
 	height: 100%;
 }
-.bhp_related_to_surgery #image4{
+.b_bhp_related_to_surgery #image4{
 	position: absolute;
 	width: 80px;
 	height: 80px;
@@ -441,11 +442,11 @@ body{
 	left: 40px;
 	top: 88px;
 }
-.bhp_related_to_surgery #image4 img{
+.b_bhp_related_to_surgery #image4 img{
 	width: 100%;
 	height: 100%;
 }
-.bhp_related_to_surgery #image5{
+.b_bhp_related_to_surgery #image5{
 	position: absolute;
 	width: 15px;
 	height: 15px;
@@ -453,11 +454,11 @@ body{
 	left: 37px;
 	top: 155px;
 }
-.bhp_related_to_surgery #image5 img{
+.b_bhp_related_to_surgery #image5 img{
 	width: 100%;
 	height: 100%;
 }
-.bhp_related_to_surgery #image6{
+.b_bhp_related_to_surgery #image6{
 	position: absolute;
 	width: 15px;
 	height: 15px;
@@ -465,11 +466,11 @@ body{
 	left: 67px;
 	top: 145px;
 }
-.bhp_related_to_surgery #image6 img{
+.b_bhp_related_to_surgery #image6 img{
 	width: 100%;
 	height: 100%;
 }
-.bhp_related_to_surgery #image7{
+.b_bhp_related_to_surgery #image7{
 	position: absolute;
 	width: 15px;
 	height: 15px;
@@ -477,11 +478,11 @@ body{
 	left: 95px;
 	top: 135px;
 }
-.bhp_related_to_surgery #image7 img{
+.b_bhp_related_to_surgery #image7 img{
 	width: 100%;
 	height: 100%;
 }
-.bhp_related_to_surgery #t{
+.b_bhp_related_to_surgery #t{
 	position: absolute;
 	left: 10px;
 	top: 190px;
@@ -490,7 +491,7 @@ body{
 	color: black;
 	font-weight: bold;
 }
-.a4{	
+.b_a4{	
 	-webkit-animation:demo4 2s ease-out infinite;
 }
 @-webkit-keyframes demo4{	
@@ -504,7 +505,7 @@ body{
 	  }
 }
 
-.a8{	
+.b_a8{	
 	-webkit-animation:demo8 2s ease-in infinite;
 }
 @-webkit-keyframes demo8{	
@@ -523,7 +524,7 @@ body{
 		opacity:1;
 	}
 }
-.a9{	
+.b_a9{	
 	-webkit-animation:demo9 2s ease-out infinite;
 }
 @-webkit-keyframes demo9{	
@@ -542,7 +543,7 @@ body{
 		opacity:1;
 	}
 }
-.a10{	
+.b_a10{	
 	-webkit-animation:demo10 2s ease-out infinite;
 }
 @-webkit-keyframes demo10{	
@@ -562,25 +563,25 @@ body{
 }
 
 /* 显示器 div */
-.monitor{
+.b_monitor{
 	position: absolute;
 	left: 249px;
 	top: 290px;
 	width: 320px;
 	height: 300px;
 }
-.monitor #image_div1{
+.b_monitor #image_div1{
 	position: absolute;
 	left: 100px;
 	top: 50px;
 	width: 150px;
 	height: 150px;
 }
-.monitor #image_div1 img{
+.b_monitor #image_div1 img{
 	width: 100%;
 	height: 100%;
 }
-.monitor #image_div2{
+.b_monitor #image_div2{
 	position: absolute;
 	left: 160px;
 	top: 95px;
@@ -588,11 +589,11 @@ body{
 	height: 36px;
 	-webkit-transform: translate(53px, 9px);
 }
-.monitor #image_div2 img{
+.b_monitor #image_div2 img{
 	width: 100%;
 	height: 100%;
 }
-.monitor #image_div3{
+.b_monitor #image_div3{
 	position: absolute;
 	left: 160px;
 	top: 100px;
@@ -601,7 +602,7 @@ body{
 	font-weight: bolder;
 	-webkit-transform: rotate(-20deg);
 }
-.monitor #image_div4{
+.b_monitor #image_div4{
 	position: absolute;
 	left: 170px;
 	top: 123px;
@@ -610,18 +611,18 @@ body{
 	max-width: 50px;
 	max-height: 26px;
 }
-.monitor #left_top{
+.b_monitor #left_top{
 	position: absolute;
 	left: 50px;
 	top: 10px;
 	width: 41px;
 	height: 46px;
 }
-.monitor #left_top img{
+.b_monitor #left_top img{
 	width: 100%;
 	height: 100%;
 }
-.monitor #right_top{
+.b_monitor #right_top{
 	-webkit-transform: rotate(90deg);
 	position: absolute;
 	left: 240px;
@@ -629,11 +630,11 @@ body{
 	width: 41px;
 	height: 46px;
 }
-.monitor #right_top img{
+.b_monitor #right_top img{
 	width: 100%;
 	height: 100%;
 }
-.monitor #left_bottom{
+.b_monitor #left_bottom{
 	-webkit-transform: rotate(270deg);
 	position: absolute;
 	left: 70px;
@@ -641,11 +642,11 @@ body{
 	width: 41px;
 	height: 46px;
 }
-.monitor #left_bottom img{
+.b_monitor #left_bottom img{
 	width: 100%;
 	height: 100%;
 }
-.monitor #right_bottom{
+.b_monitor #right_bottom{
 	-webkit-transform: rotate(180deg);
 	position: absolute;
 	left: 240px;
@@ -653,13 +654,13 @@ body{
 	width: 41px;
 	height: 46px;
 }
-.monitor #right_bottom img{
+.b_monitor #right_bottom img{
 	width: 100%;
 	height: 100%;
 }
 
 /* 右侧选择条 */
-.choose_item{
+.b_choose_item{
 	float: right;
 	position: absolute;
 	left: 749px;
@@ -668,52 +669,52 @@ body{
 	height: 500px;
 	z-index: 1;
 }
-.choose_item #cav1{
+.b_choose_item #cav1{
 	position: absolute;
 	width: 200px;
 	height: 100px;
 	left: 0px;
 	top: 0px;
 }
-.choose_item #cav1 img{
+.b_choose_item #cav1 img{
 	width: 100%;
 	height: 100%;
 }
-.choose_item #cav2{
+.b_choose_item #cav2{
 	position: absolute;
 	width: 200px;
 	height: 100px;
 	left: 0px;
 	top: 100px;
 }
-.choose_item #cav2 img{
+.b_choose_item #cav2 img{
 	width: 100%;
 	height: 100%;
 }
-.choose_item #cav3{
+.b_choose_item #cav3{
 	position: absolute;
 	width: 200px;
 	height: 100px;
 	left: 0px;
 	top: 200px;
 }
-.choose_item #cav3 img{
+.b_choose_item #cav3 img{
 	width: 100%;
 	height: 100%;
 }
-.choose_item #cav4{
+.b_choose_item #cav4{
 	position: absolute;
 	width: 200px;
 	height: 100px;
 	left: 0px;
 	top: 300px;
 }
-.choose_item #cav4 img{
+.b_choose_item #cav4 img{
 	width: 100%;
 	height: 100%;
 }
 /* 对号和错误符号显示 */
-.error_or_checkmark{
+.b_error_or_checkmark{
 	position: absolute;
 	left: 350px;
 	top: 190px;
@@ -721,12 +722,12 @@ body{
 	height: 144px
 }
 
-.error_or_checkmark canvas{
+.b_error_or_checkmark canvas{
 	width: 167px;
 	height: 144px
 }
 
-.right_arrow{
+.b_right_arrow{
 	position: absolute;
 	left: 920px;
 	top: 650px;
@@ -734,7 +735,7 @@ body{
 	width: 104px;
 	height: 70px;
 }
-.left_arrow{
+.b_left_arrow{
 	position: absolute;
 	left: 20px;
 	top: 650px;
