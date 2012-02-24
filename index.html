@@ -8,6 +8,12 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="./js/jquery-1.7.1.js"></script>
 <link rel="stylesheet" href="./css/index.css" />
+<link rel="stylesheet" href="./css/first.css" />
+<script type="text/javascript" src="./js/error_image.js"></script>
+<script type="text/javascript" src="./js/checkmark_image.js"></script>
+<link rel="stylesheet" href="./css/b_h_p_page.css" />
+<link rel="stylesheet" href="./css/disease_incidence.css" />
+<link rel="stylesheet" href="./css/course.css" />
 </head>
 <body>
 <div class="all_page">
@@ -26,7 +32,13 @@ $('.all_page').load('./first.html',function(){
 
 function load_first(){
 	$('.all_page').empty();
-	$('.all_page').load('./first.html');
+	$('.all_page').load('./first.html',function(){
+		$('.left').addClass('transition1');
+		$('.right_bottom').addClass('transition2');
+		$('.right_top').addClass('transition3');
+		$('.left_top_text').addClass('transition4');
+		$('.bottom').addClass('transition5');
+	});
 }
 function load_course(){
 	$('.all_page').empty();
