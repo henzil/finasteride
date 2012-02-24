@@ -16,7 +16,13 @@
 
 <script type="text/javascript">
 $('.all_page').empty();
-$('.all_page').load('./first.html');
+$('.all_page').load('./first.html',function(){
+	$('.left').addClass('transition1');
+	$('.right_bottom').addClass('transition2');
+	$('.right_top').addClass('transition3');
+	$('.left_top_text').addClass('transition4');
+	$('.bottom').addClass('transition5');
+});
 
 function load_first(){
 	$('.all_page').empty();
