@@ -10,41 +10,31 @@
 <link rel="stylesheet" href="./css/index.css" />
 </head>
 <body>
-<div class="all">
-<!-- 	左上角图片 -->
-	<div class="left_top_text">
-<!-- 		<img alt="" src="./image/L0/L0-4.png"> -->
-		对前列腺体积增大的BPH患者
-	</div>
-<!--  右上角图片 -->
-	<div class="right_top">
-		<div class="left">
-			<img alt="" src="./image/L0/L0-2.png">
-		</div>
-		<div class="right">
-			<img alt="" src="./image/L0/L0-1.png">
-		</div>
-	</div>	
-	<div class="right_bottom">
-		<img alt="" src="./image/L0/L0-3.png">
-	</div>
-	<div class="right_arrow">
-		<img alt="" src="./image/right_arrow.png" onclick="window.location='./course.html';">
-	</div>
-	<div class="bottom">
-<!-- 		<img alt="" src="./image/L0/L0-5.png"> -->
-		<div id="f_01">缩小</div>
-		<div id="f_02">才是硬道理</div>
-	</div>
+<div class="all_page">
+	
 </div>
 
-
 <script type="text/javascript">
-$('.left').addClass('transition1');
-$('.right_bottom').addClass('transition2');
-$('.right_top').addClass('transition3');
-$('.left_top_text').addClass('transition4');
-$('.bottom').addClass('transition5');
+$('.all_page').empty();
+$('.all_page').load('./first.html');
+
+function load_first(){
+	$('.all_page').empty();
+	$('.all_page').load('./first.html');
+}
+function load_course(){
+	$('.all_page').empty();
+	$('.all_page').load('./course.html');
+}
+function load_bhp(){
+	$('.all_page').empty();
+	$('.all_page').load('./b_h_p_page.html');
+}
+function load_disease_incidence(){
+	$('.all_page').empty();
+	$('.all_page').load('./disease_incidence.html');
+}
+
 </script>
 
 </body>

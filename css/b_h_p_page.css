@@ -162,6 +162,20 @@ body{
 	width: 100%;
 	height: 100%;
 }
+.surgical_treatment #image_canvas{
+	position: absolute;
+	width: 89px;
+	height: 106px;
+	
+	left: 20px;
+	top: 10px;
+/* 	width: 58px; */
+/* 	height: 30px; */
+	
+/* 	left: 40px; */
+/* 	top: 55px; */
+/* 	background-color: red; */
+}
 .surgical_treatment #image3{
 	position: absolute;
 	width: 128px;
