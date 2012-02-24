@@ -1,16 +1,5 @@
 @CHARSET "UTF-8";
-html{
-	background-color: white;
-	margin: 0px;
-}
-body{
-	width: 1024px;
-	height: 768px;
-	max-width: 1024px;
-	max-height: 768px;
-	background-color: white;
-	margin: 0px auto;
-}
+
 .b_all{
 	background-image: url("../image/L2/L2-bg.png");
 	position: absolute;

@@ -1,14 +1,5 @@
 @CHARSET "UTF-8";
-html{
-	background-color: white;
-}
-body{
-	width: 1024px;
-	height: 768px;
-	max-width: 1024px;
-	max-height: 768px;
-	margin: 0px auto;
-}
+
 .f_all{
 	position: absolute;
 	width: 1024px;
